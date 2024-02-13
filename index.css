@@ -1,0 +1,123 @@
+
+body {
+    background-color: black;
+}
+
+/* remove scrollbar */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+p {
+    color: white;
+    font-family: 'Lora', serif;
+    font-size: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.roadmap {
+    color: white;
+    font-family: 'Lora', serif;
+}
+
+.content-block {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-block {
+    width: min(60%, 600px);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.semibold {
+    font-weight: 500;
+}
+
+.not-visible {
+    display: none;
+}
+
+#buttonContainer{
+    height: 50px;
+    position: relative;
+    top: 100px;
+}
+
+#scrollButton {
+    color: #ffffff;
+    cursor: pointer;
+    width:fit-content;
+    opacity: 0;
+}
+
+
+/* Trigger  */
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+/* Optional Delays, change values here  */
+.one { animation-delay: 0.2s; }
+.two { animation-delay: .6s; }
+.three { animation-delay: 1s; }
+.four { animation-delay: 1.4s; }
+
+/* Animations start here  */
+
+/* FADE IN  */
+
+@keyframes fadeIn {
+from { opacity: 0; }
+to { opacity: 1; } }
+.fadeIn { animation-name: fadeIn; }
+
+/* FADE IN UP */
+
+@keyframes fadeInUp {
+from { opacity: 0; transform: translate3d(0, 20px, 0); }
+to { opacity: 1; transform: none; } }
+.fadeInUp { animation-name: fadeInUp; }
+
+/* FADE OUT  */
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; } }
+    .fadeOut { animation-name: fadeOut; }
+
+/* @end standaard animaties  */
+
+
+.callout {
+    max-width: 500px;
+    margin:0 auto;
+    padding-bottom:100px
+}
+
+.animation-text.in-view {
+    animation: fadeInUp 2s;
+}
+
+.animation-delayed {
+    animation: fadeIn 2s 5s;
+    animation-fill-mode: forwards
+}
+
+.animate-out {
+    animation: fadeOut 2s;
+    animation-fill-mode: forwards
+}
+
